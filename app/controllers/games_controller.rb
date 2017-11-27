@@ -24,7 +24,6 @@ class GamesController < ApplicationController
   # end
 
   def valid?(answer)
-    raise
     @answer.chars.all? { |letter| @answer.count(letter) <= @grid.count(letter) }
   end
 
@@ -43,5 +42,4 @@ class GamesController < ApplicationController
     json = JSON.parse(response.read)
     return json['found']
   end
-
 end
