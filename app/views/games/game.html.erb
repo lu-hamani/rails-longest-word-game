@@ -1,0 +1,13 @@
+<h1>Des chiffres mais surtout des lettres !</h1>
+
+<h3><%= @grid.join(" ") %></h3>
+<h2><%= @start_time %></h2>
+<h2><%= @end_time %></h2>
+
+
+<form action="/score">
+  <label for="question">Give us your word</label>
+  <input type="hidden" name="grid" value="<%= @grid.join(" ") %>">
+  <input type="text" id="question" name="query" placeholder="Your word">
+  <input type="submit" value="Found one!">
+</form>
